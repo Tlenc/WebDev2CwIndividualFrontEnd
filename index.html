@@ -157,7 +157,8 @@
 
   let app = new Vue({
     el: '#app',
-    data: {
+    data() {
+      return {
       lesson: {},
       userSearch: null,
       search: "",
@@ -182,7 +183,7 @@
       },
       cart: []
 
-    },
+    }},
     // setting up data 
     async created () {
         console.log("lesson funct")
