@@ -168,8 +168,6 @@
         showProduct: true
         
       },
- 
-     
 
       order: {
         firstName: "",
@@ -186,9 +184,9 @@
 
     },
     // setting up data 
-    created:  function(){
+   async created:  function(){
         console.log("lesson funct")
-        fetch('https://web-apps-cw2.herokuapp.com/lesson').then(
+       await fetch('https://web-apps-cw2.herokuapp.com/lesson').then(
            function (response) {
             response.json().then(
               function (json) {
