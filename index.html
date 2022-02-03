@@ -152,13 +152,33 @@
 
 </body>
 
-
+<script>
+  let app = new Vue({
+      el: '#app',
+      data: {
+        lesson: {}
+      },
+      created: function(){
+        fetch('https://web-apps-cw2.herokuapp.com/lesson').then(
+          function (response) {
+            response.json().then(
+              function (json) {
+                console.log(JSON.stringify(json));
+                app.lesson = json;
+              });
+          });
+      },
+      methods: {
+      },
+      computed: {
+      }
+  })  
+</script>
 <script>
 
   let app = new Vue({
     el: '#app',
     data: {
-      lesson: {},
       userSearch: null,
       search: "",
       selected: '',
