@@ -168,17 +168,7 @@
         showProduct: true
         
       },
-      created:  function(){
-        console.log("lesson funct")
-        fetch('https://web-apps-cw2.herokuapp.com/lesson').then(
-           function (response) {
-            response.json().then(
-              function (json) {
-                console.log(JSON.stringify(json));
-                app.lesson = json;
-              });
-          });
-      },
+ 
      
 
       order: {
@@ -196,6 +186,17 @@
 
     },
     // setting up data 
+    created:  function(){
+        console.log("lesson funct")
+        fetch('https://web-apps-cw2.herokuapp.com/lesson').then(
+           function (response) {
+            response.json().then(
+              function (json) {
+                console.log(JSON.stringify(json));
+                app.lesson = json;
+              });
+          });
+      },
     methods: {
       
       inputCheck(nameInput,numberInput){
