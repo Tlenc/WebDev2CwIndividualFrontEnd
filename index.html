@@ -158,16 +158,8 @@
   let app = new Vue({
     el: '#app',
     data: {
-      userSearch: null,
-      search: "",
-      selected: '',
-      picked: null,
       lesson: {},
-      website: {
-        name: "Courses",
-        showProduct: true,
-        
-      },
+     
       created: function(){
         fetch('https://web-apps-cw2.herokuapp.com/lesson').then(
           function (response) {
@@ -178,7 +170,15 @@
               });
           });
       },
-     
+      userSearch: null,
+      search: "",
+      selected: '',
+      picked: null,
+      website: {
+        name: "Courses",
+        showProduct: true,
+        
+      },
 
       order: {
         firstName: "",
