@@ -368,14 +368,17 @@ fetch('https://web-apps-cw2.herokuapp.com/update', putOptions)
       searchResult(){
       if(this.userSearch){
         console.log(this.userSearch);
+        fetch('https://web-apps-cw2.herokuapp.com/search' + this.userSearch).then(
+           function (response) {
+            response.json().then(
+              function (json) {
+                console.log(JSON.stringify(json));
+                app.lessons = json;
+              });
+          });
 
-        fetch('https://web-apps-cw2.herokuapp.com/search'+this.userSearch,{
-          method: GET,
-          headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-          }
-        } )
+
+         
             }}
     } // search (filter) by subject and location
   
