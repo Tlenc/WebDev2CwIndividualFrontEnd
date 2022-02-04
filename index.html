@@ -331,7 +331,7 @@
       if(this.userSearch){
         console.log(this.userSearch);
       return this.lessons.filter((item)=>{
-        return this.userSearch.toLowerCase().split(' ').every(v => item.subject.toLowerCase().includes(v)) ||  this.userSearch.toLowerCase().split(' ').every(v => item.location.toLowerCase().includes(v))    
+        return this.userSearch.toLowerCase().split(' ').every(v => item.subject.toLowerCase().includes(v)) ||  userSearch.bind.toLowerCase().split(' ').every(v => item.location.toLowerCase().includes(v))    
       })
       }else{
         return this.lessons;
