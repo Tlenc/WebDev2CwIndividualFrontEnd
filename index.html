@@ -222,9 +222,10 @@
       }, // method to show or hide checkout
       submitForm() {// data to be sent to the POST request
 const data = {
+
   name: this.order.firstName,
-  body: "bar", 
-  userId:1
+  number: this.order.number, 
+  lessonId: this.cartContent.list
 }
 const options = {
   method : 'POST',
