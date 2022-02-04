@@ -221,7 +221,8 @@
         this.website.showProduct = this.website.showProduct ? false : true;
       }, // method to show or hide checkout
       submitForm() {
-        { alert("Order submitted!") }
+        { alert("Order submitted!")
+      console.log(cart) }
       },
       canAdd(lesson) {
         return lesson.space > this.cartCount(lesson._id);
