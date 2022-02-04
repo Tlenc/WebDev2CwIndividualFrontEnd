@@ -232,9 +232,7 @@ fetch('https://web-apps-cw2.herokuapp.com/order', {
   body: JSON.stringify(_data),
   headers: {"Content-type": "application/json; charset=UTF-8"}
 })
-.then(response => response.json()) 
-.then(json => console.log(json))
-.catch(err => console.log(err))
+
       },
       canAdd(lesson) {
         return lesson.space > this.cartCount(lesson._id);
