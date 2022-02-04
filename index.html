@@ -365,10 +365,10 @@ fetch('https://web-apps-cw2.herokuapp.com/update', putOptions)
         return this.cart.length;
       }, //to check the size of the cart
      
-      searchResult(){
+      async searchResult(){
       if(this.userSearch){
         console.log(this.userSearch);
-        fetch('https://web-apps-cw2.herokuapp.com/search/' + this.userSearch).then(
+        await fetch('https://web-apps-cw2.herokuapp.com/search/' + this.userSearch).then(
            function (response) {
             response.json().then(
               function (json) {
