@@ -221,18 +221,21 @@
         this.website.showProduct = this.website.showProduct ? false : true;
       }, // method to show or hide checkout
       submitForm() {// data to be sent to the POST request
-let _data = {
+const _data = {
   title: "foo",
   body: "bar", 
   userId:1
 }
+const options = {
+  method : 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(data)
+};
 
-fetch('https://web-apps-cw2.herokuapp.com/order', {
-  method: "POST",
-  body: JSON.stringify(_data),
-  headers: {"Content-type": "application/json; charset=UTF-8"}
-  
-})
+fetch('https://web-apps-cw2.herokuapp.com/order', options) 
+
 
       },
       canAdd(lesson) {
