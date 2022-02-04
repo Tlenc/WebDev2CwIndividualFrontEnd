@@ -238,7 +238,13 @@ const options = {
 
 fetch('https://web-apps-cw2.herokuapp.com/order', options) 
 
-var remainingSpace = remainingSpaces(this.cart[0]);
+for(let x = 0; x<lessons.length;x++){
+  var remainingSpace;
+            if(this.cart[0] === lessons[x]._id){
+              remainingSpace = lessons[x].space-this.cart.length;           
+          }
+      }
+
 const putData = {
   lessonId: this.cart[0],
   space: remainingSpace
@@ -257,21 +263,12 @@ fetch('https://web-apps-cw2.herokuapp.com/update', putOptions)
       canAdd(lesson) {
         return lesson.space > this.cartCount(lesson._id);
       }, // check if its allowed to add more lessons to the cart
-      remainingSpaces(lessonId) {
-        let remaining;
-        for(let i = 0; i< this.lessons.length; i++){
-          if (lessons[i]._id === lessonId) {
-              remaining = lessons[i].space - this.cart.length;
-          }
-        }
-        return remaining;
-      },
+   
       cartCount(_id) {
         let count = 0;
         for (let i = 0; i < this.cart.length; i++) {
           if (this.cart[i] === _id) {
             count++;
-
           }
         }
         return count;
