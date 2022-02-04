@@ -368,19 +368,14 @@ fetch('https://web-apps-cw2.herokuapp.com/update', putOptions)
       searchResult(){
       if(this.userSearch){
         console.log(this.userSearch);
-        const searchData = {
-        searchTerm: this.userSearch,
-        }
-        const SearchOptions = {
-        method : 'GET',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(searchData)
-        };
 
-        fetch('https://web-apps-cw2.herokuapp.com/search', SearchOptions)
-        
+        fetch('https://web-apps-cw2.herokuapp.com/search'+this.userSearch,{
+          method: GET,
+          headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+          }
+        } )
             }}
     } // search (filter) by subject and location
   
