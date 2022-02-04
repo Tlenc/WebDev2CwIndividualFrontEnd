@@ -238,10 +238,10 @@ const options = {
 
 fetch('https://web-apps-cw2.herokuapp.com/order', options) 
 
-for(let x = 0; x<lessons.length;x++){
+for(let x = 0; x<this.lessons.length;x++){
   var remainingSpace;
-            if(this.cart[0] === lessons[x]._id){
-              remainingSpace = lessons[x].space-this.cart.length;           
+            if(this.cart[0] === this.lessons[x]._id){
+              remainingSpace = this.lessons[x].space-this.cart.length;           
           }
       }
 
