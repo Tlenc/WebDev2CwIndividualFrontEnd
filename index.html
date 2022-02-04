@@ -328,7 +328,7 @@
       }, //to check the size of the cart
      
       searchResult(){
-      if(userSearch){
+      if(this.userSearch){
       return lessons.filter((item)=>{
         return userSearch.toLowerCase().split(' ').every(v => item.subject.toLowerCase().includes(v)) ||  userSearch.toLowerCase().split(' ').every(v => item.location.toLowerCase().includes(v))    
       })
