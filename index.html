@@ -328,9 +328,9 @@
       }, //to check the size of the cart
      
       searchResult(){
-      if(this.userSearch){
-      return this.lessons.filter((item)=>{
-        return this.userSearch.toLowerCase().split(' ').every(v => item.subject.toLowerCase().includes(v)) ||  this.userSearch.toLowerCase().split(' ').every(v => item.location.toLowerCase().includes(v))    
+      if(userSearch){
+      return lessons.filter((item)=>{
+        return userSearch.toLowerCase().split(' ').every(v => item.subject.toLowerCase().includes(v)) ||  userSearch.toLowerCase().split(' ').every(v => item.location.toLowerCase().includes(v))    
       })
       }else{
         return this.lessons;
