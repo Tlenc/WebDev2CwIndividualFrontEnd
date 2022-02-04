@@ -231,7 +231,7 @@
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
               },
-              body: JSON.stringify({ name: firstName, phone: number, lesson: cart.lessons._id })
+              body: JSON.stringify({ name: this.firstName, phone: this.number, lesson: this.cart.lessons._id })
             });
             const content = await rawResponse.json();
 
