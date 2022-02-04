@@ -223,7 +223,7 @@
       }, // method to show or hide checkout
       submitForm() {
         {
-          alert("Order submitted!")
+        
           (async () => {
             const rawResponse = await fetch('https://web-apps-cw2.herokuapp.com/order', {
               method: 'POST',
@@ -237,6 +237,7 @@
 
             console.log(content);
           })();
+          alert("Order submitted!")
         }
       },
       canAdd(lesson) {
