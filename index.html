@@ -329,6 +329,7 @@
      
       searchResult(){
       if(this.userSearch){
+        console.log(userSearch);
       return this.lessons.filter((item)=>{
         return this.userSearch.toLowerCase().split(' ').every(v => item.subject.toLowerCase().includes(v)) ||  this.userSearch.toLowerCase().split(' ').every(v => item.location.toLowerCase().includes(v))    
       })
