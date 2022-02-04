@@ -379,13 +379,7 @@ fetch('https://web-apps-cw2.herokuapp.com/update', putOptions)
         body: JSON.stringify(searchData)
         };
 
-        fetch('https://web-apps-cw2.herokuapp.com/search', SearchOptions).then(
-          function (response) {
-            response.json().then(
-              function (json) {
-                console.log(JSON.stringify(json));
-                app.lessons = json;
-              })});
+        fetch('https://web-apps-cw2.herokuapp.com/search', SearchOptions)
         
             }}
     } // search (filter) by subject and location
