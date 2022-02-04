@@ -368,13 +368,26 @@ fetch('https://web-apps-cw2.herokuapp.com/update', putOptions)
       searchResult(){
       if(this.userSearch){
         console.log(this.userSearch);
-      return this.lessons.filter((item)=>{
-        return this.userSearch.toLowerCase().split(' ').every(v => item.subject.toLowerCase().includes(v)) ||  this.userSearch.toLowerCase().split(' ').every(v => item.location.toLowerCase().includes(v))    
-      })
-      }else{
-        return this.lessons;
-      }
-    }
+        const searchData = {
+        searchTerm: this.userSearch,
+        }
+        const SearchOptions = {
+        method : 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(searchData)
+        };
+
+        fetch('https://web-apps-cw2.herokuapp.com/search', SearchOptions).then(
+          function (response) {
+            response.json().then(
+              function (json) {
+                console.log(JSON.stringify(json));
+                app.lessons = json;
+              })});
+        
+            }}
     } // search (filter) by subject and location
   
 })
