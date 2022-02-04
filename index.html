@@ -330,7 +330,7 @@
       searchResult(){
       if(this.userSearch){
       return this.lessons.filter((item)=>{
-        return userSearch.toLowerCase().split(' ').every(v => item.subject.toLowerCase().includes(v)) ||  userSearch.toLowerCase().split(' ').every(v => item.location.toLowerCase().includes(v))    
+        return this.userSearch.toLowerCase().split(' ').every(v => item.subject.toLowerCase().includes(v)) ||  userSearch.toLowerCase().split(' ').every(v => item.location.toLowerCase().includes(v))    
       })
       }else{
         return this.lessons;
