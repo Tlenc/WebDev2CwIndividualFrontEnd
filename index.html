@@ -368,7 +368,7 @@ fetch('https://web-apps-cw2.herokuapp.com/update', putOptions)
       searchResult(){
       if(this.userSearch){
         console.log(this.userSearch);
-        fetch('https://web-apps-cw2.herokuapp.com/search' + this.userSearch).then(
+        fetch('https://web-apps-cw2.herokuapp.com/search/' + this.userSearch).then(
            function (response) {
             response.json().then(
               function (json) {
