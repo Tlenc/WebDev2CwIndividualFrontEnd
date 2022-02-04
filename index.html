@@ -60,7 +60,7 @@
       <div style="text-align: left;" v-for='lesson in searchResult'>
        
         <figure>
-          <img style="width: 200px;" v-bind:src="https://web-apps-cw2.herokuapp.com/lesson.image">
+          <img style="width: 200px;" v-bind:src="https://web-apps-cw2.herokuapp.com/" + "lesson.image">
         </figure>
         <h2 v-text="lesson.subject"></h2>
         <p>Location: {{lesson.location}}</p>
